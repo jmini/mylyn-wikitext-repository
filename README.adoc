@@ -1,0 +1,130 @@
+:wikitext: https://wiki.eclipse.org/Mylyn/WikiText
+:bug421551: https://bugs.eclipse.org/bugs/show_bug.cgi?id=421551
+:mylyn_ml: http://dev.eclipse.org/mhonarc/lists/mylyn-docs-dev/
+:mylyn_forum: http://www.eclipse.org/forums/index.php/f/83/
+:mylyn_so: http://stackoverflow.com/tags/mylyn-wikitext
+:bintray_package: https://bintray.com/jmini/maven/mylyn-wikitext/view
+:eclipse_b3: https://www.eclipse.org/b3
+:issues: https://github.com/jmini/mylyn-wikitext-repository/issues
+:license: http://www.eclipse.org/legal/epl-v10.html
+
+
+= mylyn-wikitext-repository
+
+This repository contains my notes and tools to create a maven repository for the link:{wikitext}[Mylyn Wikitext] jars.
+
+== Official maven repository
+
+There is an official maven repository hosted by the Eclipse fundation:
+
+  https://repo.eclipse.org/content/repositories/mylyn-snapshots/
+
+Please note that this repository contains only snapshot artifacts.
+There is no repository where the release artifacts are published (see link:{bug421551}[Bug 421551] for that).
+
+== Resulting maven repository
+
+You can use Mylyn Wikitext jars (browse them in the link:{bintray_package}[mylyn-wikitext package]) from my maven repository hosted on bintray:
+
+  https://bintray.com/artifact/download/jmini/maven/
+
+To use the Mylyn Wikitext jars in your pom, you can do:
+
+[source,xml]
+----
+<project>
+  <!-- ... -->
+  <dependencies>
+    <dependency>
+      <groupId>org.eclipse.mylyn</groupId>
+      <artifactId>org.eclipse.mylyn.wikitext.core</artifactId>
+      <version>2.5.0.v20150522-1430</version>
+    </dependency>
+    <dependency>
+       <groupId>org.eclipse.mylyn</groupId>
+       <artifactId>org.eclipse.mylyn.wikitext.core.ant</artifactId>
+       <version>2.5.0.v20150420-1908</version>
+     </dependency>
+    <dependency>
+       <groupId>org.eclipse.mylyn</groupId>
+       <artifactId>org.eclipse.mylyn.wikitext.confluence.core</artifactId>
+       <version>2.5.0.v20150420-1908</version>
+     </dependency>
+    <dependency>
+       <groupId>org.eclipse.mylyn</groupId>
+       <artifactId>org.eclipse.mylyn.wikitext.html.core</artifactId>
+       <version>2.5.0.v20150420-1908</version>
+     </dependency>
+    <dependency>
+       <groupId>org.eclipse.mylyn</groupId>
+       <artifactId>org.eclipse.mylyn.wikitext.markdown.core</artifactId>
+       <version>2.5.0.v20150508-2326</version>
+     </dependency>
+    <dependency>
+       <groupId>org.eclipse.mylyn</groupId>
+       <artifactId>org.eclipse.mylyn.wikitext.mediawiki.core</artifactId>
+       <version>2.5.0.v20150420-1908</version>
+     </dependency>
+    <dependency>
+       <groupId>org.eclipse.mylyn</groupId>
+       <artifactId>org.eclipse.mylyn.wikitext.textile.core</artifactId>
+       <version>2.5.0.v20150420-1908</version>
+     </dependency>
+    <dependency>
+       <groupId>org.eclipse.mylyn</groupId>
+       <artifactId>org.eclipse.mylyn.wikitext.tracwiki.core</artifactId>
+       <version>2.5.0.v20150420-1908</version>
+     </dependency>
+    <dependency>
+       <groupId>org.eclipse.mylyn</groupId>
+       <artifactId>org.eclipse.mylyn.wikitext.twiki.core</artifactId>
+       <version>2.5.0.v20150420-1908</version>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <id>mylyn-wikitext.repo</id>
+      <url>https://bintray.com/artifact/download/jmini/maven/</url>
+    </repository>
+  </repositories>
+</project>
+----
+
+NOTE: because I have used the "Eclipse B3 Aggregator" tool (see below) to generate the maven repository, the groupId is not `org.eclipse.mylyn.docs` but `org.eclipse.mylyn`.
+In my opinion this invalidates my idea to use the "Eclipse B3 Aggregator" to produce the maven repository.
+
+
+== Description
+
+I have used the link:{eclipse_b3}[Eclipse b3] tool to convert the p2 repository into a maven repository.
+The `*.b3aggr` files are located in the `aggregator` project.
+
+== Build
+
+There is no automatic build at the moment.
+This section describes the manual steps requested to build the maven repository and to upload it to bintray.
+
+. Open an `*.b3aggr` file with the "Aggregator Model Editor".
+. Select the root node and run "Build Aggregation".
+. In the created repository, remove unnecessary p2 files:
+  * {repository}/final/artifacts.jar
+  * {repository}/final/content.jar
+  * {repository}/final/p2.index
+. Zip the "{repository}/final" folder (in the zip, there should be no "final". To create this zip with 7zip, select all child-folders in the "final" folder and select "Add to 'final.zip'")
+. Upload this zip in bintray. To use the web UI, a version should exists in a package.
+
+== Issue tracker / Get in touch
+
+For this project (content of this repository and of the maven repository):
+
+* Use the link:{issues}[mylyn-wikitext-repository issue tracker] on GitHub.
+
+For the `mylyn-wikitext` project itself:
+
+* Mailing list: link:{mylyn_ml}[mylyn-docs-dev]
+* Forum: link:{mylyn_forum}[Mylyn]
+* StackOverflow Tag: link:{mylyn_so}[mylyn-wikitext]
+
+== License
+
+link:{license}[Eclipse Public License - v 1.0]
