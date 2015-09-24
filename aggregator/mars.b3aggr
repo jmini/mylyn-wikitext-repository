@@ -13,6 +13,10 @@
         <bundles name="org.eclipse.mylyn.wikitext.tracwiki.core"/>
         <bundles name="org.eclipse.mylyn.wikitext.twiki.core"/>
       </repositories>
+      <mavenMappings namePattern="^org.eclipse.mylyn.wikitext.*$" groupId="org.eclipse.mylyn.docs" artifactId="$0"/>
+      <mavenMappings namePattern="com.google.guava" groupId="com.google.guava" artifactId="guava"/>
+      <mavenMappings namePattern="org.apache.ant" groupId="org.apache.ant" artifactId="ant"/>
+      <mavenMappings namePattern="org.jsoup" groupId="org.jsoup" artifactId="jsoup"/>
     </contributions>
   </validationSets>
   <configurations/>

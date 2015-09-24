@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+
+     Ant tasks for the mylyn-wikitext-repository project
+
+     ====================================================================== -->
+<project name="mylyn-wikitext-repository.build" default="default">
+    <description>
+        Ant tasks for the mylyn-wikitext-repository project
+    </description>
+
+    <property name="maven.repo.folder" value="mars_repository"/>
+    <property name="dest.file" value="repository.zip"/>
+
+    <!-- ================================= 
+          target: default
+         ================================= -->
+    <target name="default" depends="clean" description="zip the maven repository produced by B3.">
+        <zip destfile="${dest.file}">
+            <zipfileset dir="${maven.repo.folder}/final" includes="org/eclipse/mylyn/docs/**"/>
+        </zip>
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - - 
+          target: clean
+         - - - - - - - - - - - - - - - - - -->
+    <target name="clean">
+        <delete>
+            <fileset file="${dest.file}"/>
+        </delete>
+    </target>
+
+</project>
