@@ -9,8 +9,8 @@
         Ant tasks for the mylyn-wikitext-repository project
     </description>
 
-    <property name="maven.repo.folder" value="mars_repository"/>
-    <property name="dest.file" value="repository.zip"/>
+    <property name="maven.repo.folder" value="mars1_repository"/>
+    <property name="dest.file" value="target/mars1_maven_repository.zip"/>
 
     <!-- ================================= 
           target: default

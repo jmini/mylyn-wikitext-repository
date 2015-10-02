@@ -30,47 +30,47 @@ To use the Mylyn Wikitext jars in your pom, pick the interesting parts in from t
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.core</artifactId>
-      <version>2.5.0.v20150522-1430</version>
+      <version>2.6.0.v20150901-2143</version>
     </dependency>
     <dependency>
-       <groupId>org.eclipse.mylyn.docs</groupId>
-       <artifactId>org.eclipse.mylyn.wikitext.core.ant</artifactId>
-       <version>2.5.0.v20150420-1908</version>
-     </dependency>
+      <groupId>org.eclipse.mylyn.docs</groupId>
+      <artifactId>org.eclipse.mylyn.wikitext.core.ant</artifactId>
+      <version>2.6.0.v20150625-2041</version>
+    </dependency>
     <dependency>
-       <groupId>org.eclipse.mylyn.docs</groupId>
-       <artifactId>org.eclipse.mylyn.wikitext.confluence.core</artifactId>
-       <version>2.5.0.v20150420-1908</version>
-     </dependency>
+      <groupId>org.eclipse.mylyn.docs</groupId>
+      <artifactId>org.eclipse.mylyn.wikitext.confluence.core</artifactId>
+      <version>2.6.0.v20150901-2143</version>
+    </dependency>
     <dependency>
-       <groupId>org.eclipse.mylyn.docs</groupId>
-       <artifactId>org.eclipse.mylyn.wikitext.html.core</artifactId>
-       <version>2.5.0.v20150420-1908</version>
-     </dependency>
+      <groupId>org.eclipse.mylyn.docs</groupId>
+      <artifactId>org.eclipse.mylyn.wikitext.html.core</artifactId>
+      <version>2.6.0.v20150901-2143</version>
+    </dependency>
     <dependency>
-       <groupId>org.eclipse.mylyn.docs</groupId>
-       <artifactId>org.eclipse.mylyn.wikitext.markdown.core</artifactId>
-       <version>2.5.0.v20150508-2326</version>
-     </dependency>
+      <groupId>org.eclipse.mylyn.docs</groupId>
+      <artifactId>org.eclipse.mylyn.wikitext.markdown.core</artifactId>
+      <version>2.6.0.v20150901-2143</version>
+    </dependency>
     <dependency>
-       <groupId>org.eclipse.mylyn.docs</groupId>
-       <artifactId>org.eclipse.mylyn.wikitext.mediawiki.core</artifactId>
-       <version>2.5.0.v20150420-1908</version>
-     </dependency>
+      <groupId>org.eclipse.mylyn.docs</groupId>
+      <artifactId>org.eclipse.mylyn.wikitext.mediawiki.core</artifactId>
+      <version>2.6.0.v20150901-2143</version>
+    </dependency>
     <dependency>
-       <groupId>org.eclipse.mylyn.docs</groupId>
-       <artifactId>org.eclipse.mylyn.wikitext.textile.core</artifactId>
-       <version>2.5.0.v20150420-1908</version>
-     </dependency>
+      <groupId>org.eclipse.mylyn.docs</groupId>
+      <artifactId>org.eclipse.mylyn.wikitext.textile.core</artifactId>
+      <version>2.6.0.v20150901-2143</version>
+    </dependency>
     <dependency>
-       <groupId>org.eclipse.mylyn.docs</groupId>
-       <artifactId>org.eclipse.mylyn.wikitext.tracwiki.core</artifactId>
-       <version>2.5.0.v20150420-1908</version>
-     </dependency>
+      <groupId>org.eclipse.mylyn.docs</groupId>
+      <artifactId>org.eclipse.mylyn.wikitext.tracwiki.core</artifactId>
+      <version>2.6.0.v20150625-2041</version>
+    </dependency>
     <dependency>
-       <groupId>org.eclipse.mylyn.docs</groupId>
-       <artifactId>org.eclipse.mylyn.wikitext.twiki.core</artifactId>
-       <version>2.5.0.v20150420-1908</version>
+      <groupId>org.eclipse.mylyn.docs</groupId>
+      <artifactId>org.eclipse.mylyn.wikitext.twiki.core</artifactId>
+      <version>2.6.0.v20150901-2143</version>
     </dependency>
   </dependencies>
   
@@ -85,8 +85,8 @@ To use the Mylyn Wikitext jars in your pom, pick the interesting parts in from t
 
 === Versions
 
-* `Mars.0` (24/06/2015), Version 2.5.0
-* `Mars.1` (available in October 2015)
+* link:https://bintray.com/jmini/maven/mylyn-wikitext/Mars.0/view[Mars.0] (24/06/2015), Version `2.5.0.v*`
+* link:https://bintray.com/jmini/maven/mylyn-wikitext/Mars.1/view[Mars.1] (02/10/2015), Version `2.6.0.v*`
 
 === Remarks
 Because the Idea of this repository is to consume mylyn-wikitext in a plain maven project (or maven plugin), only the `core` jars are published.
