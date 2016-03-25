@@ -5,8 +5,11 @@
 :mylyn_so: http://stackoverflow.com/tags/mylyn-wikitext
 :bintray_package: https://bintray.com/jmini/maven/mylyn-wikitext/view
 :eclipse_b3: https://www.eclipse.org/b3
-:issues: https://github.com/jmini/mylyn-wikitext-repository/issues
+:githubrepo: jmini/mylyn-wikitext-repository
+:issues: https://github.com/{githubrepo}/issues
 :license: http://www.eclipse.org/legal/epl-v10.html
+:oomph_file: MylynWikitextRepository.setup
+:oomph_setup: https://raw.githubusercontent.com/{githubrepo}/master/{oomph_file}
 
 
 = mylyn-wikitext-repository
@@ -98,6 +101,11 @@ This is why jars like `org.eclipse.mylyn.wikitext.commonmark` or `org.eclipse.my
 === Examples
 
 Check out the link:examples/[examples].
+
+=== Setup in Eclipse IDE
+
+There is an Eclipse Oomph Setup Task to import this project: link:{oomph_setup}[{oomph_file}]
+
 
 == Official maven repository
 
