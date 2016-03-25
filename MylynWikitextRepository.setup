@@ -64,6 +64,11 @@
     <sourceLocator
         rootFolder="${git.clone.location}/aggregator"/>
   </setupTask>
+  <setupTask
+      xsi:type="projects:ProjectsImportTask">
+    <sourceLocator
+        rootFolder="${git.clone.location}/javatools"/>
+  </setupTask>
   <stream name="master"
       label="Master"/>
   <logicalProjectContainer
