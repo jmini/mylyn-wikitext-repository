@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aggregator:Aggregation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:aggregator="http://www.eclipse.org/b3/2011/aggregator/1.1.0" label="Mylyn WikiText Aggregation" buildRoot="neon_repository" packedStrategy="UNPACK_AS_SIBLING" type="R" mavenResult="true">
+  <validationSets label="main">
+    <contributions label="Mylyn WikiText contribution">
+      <repositories location="http://download.eclipse.org/releases/neon/201606221000" description="Neon update site">
+        <bundles name="org.eclipse.mylyn.wikitext.core"/>
+        <bundles name="org.eclipse.mylyn.wikitext.core.ant"/>
+        <bundles name="org.eclipse.mylyn.wikitext.asciidoc.core"/>
+        <bundles name="org.eclipse.mylyn.wikitext.confluence.core"/>
+        <bundles name="org.eclipse.mylyn.wikitext.html.core"/>
+        <bundles name="org.eclipse.mylyn.wikitext.markdown.core"/>
+        <bundles name="org.eclipse.mylyn.wikitext.mediawiki.core"/>
+        <bundles name="org.eclipse.mylyn.wikitext.mediawiki.core.ant"/>
+        <bundles name="org.eclipse.mylyn.wikitext.textile.core"/>
+        <bundles name="org.eclipse.mylyn.wikitext.tracwiki.core"/>
+        <bundles name="org.eclipse.mylyn.wikitext.twiki.core"/>
+      </repositories>
+      <mavenMappings namePattern="^org.eclipse.mylyn.wikitext.*$" groupId="org.eclipse.mylyn.docs" artifactId="$0"/>
+      <mavenMappings namePattern="com.google.guava" groupId="com.google.guava" artifactId="guava"/>
+      <mavenMappings namePattern="org.apache.ant" groupId="org.apache.ant" artifactId="ant"/>
+      <mavenMappings namePattern="org.jsoup" groupId="org.jsoup" artifactId="jsoup"/>
+    </contributions>
+  </validationSets>
+  <configurations/>
+</aggregator:Aggregation>

@@ -2,6 +2,7 @@ package wikitext;
 
 import java.io.StringWriter;
 
+import org.eclipse.mylyn.wikitext.asciidoc.core.AsciiDocLanguage;
 import org.eclipse.mylyn.wikitext.confluence.core.ConfluenceLanguage;
 import org.eclipse.mylyn.wikitext.core.parser.MarkupParser;
 import org.eclipse.mylyn.wikitext.core.parser.builder.HtmlDocumentBuilder;
@@ -14,6 +15,7 @@ import org.eclipse.mylyn.wikitext.twiki.core.TWikiLanguage;
 
 public class WikitextMain {
 
+  private static final String NAME_ASCIIDOC = "AsciiDoc";
   private static final String NAME_CONFLUENCE = "Confluence";
   private static final String NAME_MARKDWON = "Markdown";
   private static final String NAME_MEDIAWIKI = "MediaWiki";
@@ -22,6 +24,7 @@ public class WikitextMain {
   private static final String NAME_TWIKI = "TWiki";
 
   public static void main(String[] args) {
+    printHelloWorld(new AsciiDocLanguage(), NAME_ASCIIDOC, createAsciiDocHelloWorld());
     printHelloWorld(new ConfluenceLanguage(), NAME_CONFLUENCE, createConfluenceHelloWorld());
     printHelloWorld(new MarkdownLanguage(), NAME_MARKDWON, createMarkdownHelloWorld());
     printHelloWorld(new MediaWikiLanguage(), NAME_MEDIAWIKI, createMediaWikiHelloWorld());
@@ -49,6 +52,19 @@ public class WikitextMain {
 
   private static void printLine() {
     System.out.println("========================================================================");
+  }
+  
+  private static String createAsciiDocHelloWorld() {
+	  StringBuilder sb = new StringBuilder();
+	  sb.append("= Heading 1\n");
+	  sb.append("\n");
+	  sb.append("Hello World!\n");
+	  sb.append("\n");
+	  sb.append("* Lorem\n");
+	  sb.append("* Ipsum\n");
+	  sb.append("\n");
+	  sb.append("This is *AsciiDoc* language.\n");
+	  return sb.toString();
   }
 
   private static String createConfluenceHelloWorld() {

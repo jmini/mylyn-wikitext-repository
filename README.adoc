@@ -10,6 +10,7 @@
 :license: http://www.eclipse.org/legal/epl-v10.html
 :oomph_file: MylynWikitextRepository.setup
 :oomph_setup: https://raw.githubusercontent.com/{githubrepo}/master/{oomph_file}
+:blog-post: https://jmini.github.io/blog/2016/2016-02-21_maven_repo_and_pom_files.html
 
 
 = mylyn-wikitext-repository
@@ -32,49 +33,60 @@ To use the Mylyn Wikitext jars in your pom, pick the interesting parts in from t
   <dependencies>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
+      <artifactId>org.eclipse.mylyn.wikitext.asciidoc.core</artifactId>
+      <version>2.9.0.v20160524-1633</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.confluence.core</artifactId>
-      <version>2.7.0.v20151009-1723</version>
+      <version>2.9.0.v20160513-1433</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.core</artifactId>
-      <version>2.7.0.v20151015-1452</version>
+      <version>2.9.0.v20160513-1433</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.core.ant</artifactId>
-      <version>2.7.0.v20151009-1723</version>
+      <version>2.9.0.v20160513-1433</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.html.core</artifactId>
-      <version>2.7.0.v20151015-1452</version>
+      <version>2.9.0.v20160513-1433</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.markdown.core</artifactId>
-      <version>2.7.0.v20151009-1723</version>
+      <version>2.9.0.v20160513-1433</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.mediawiki.core</artifactId>
-      <version>2.7.0.v20151009-1723</version>
+      <version>2.9.0.v20160513-1433</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.mylyn.docs</groupId>
+      <artifactId>org.eclipse.mylyn.wikitext.mediawiki.core.ant</artifactId>
+      <version>2.9.0.v20160513-1433</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.textile.core</artifactId>
-      <version>2.7.0.v20151009-1723</version>
+      <version>2.9.0.v20160513-1433</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.tracwiki.core</artifactId>
-      <version>2.7.0.v20151009-1723</version>
+      <version>2.9.0.v20160513-1433</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.twiki.core</artifactId>
-      <version>2.7.0.v20151009-1723</version>
+      <version>2.9.0.v20160519-0832</version>
     </dependency>
+
   </dependencies>
   
   <repositories>
@@ -86,11 +98,14 @@ To use the Mylyn Wikitext jars in your pom, pick the interesting parts in from t
 </project>
 ----
 
+A simple example (pom file and simple java class) is presented in this link:{blog-post}[blog post].
+
 === Versions
 
 * link:https://bintray.com/jmini/maven/mylyn-wikitext/Mars.0/view[Mars.0] (24/06/2015), Version `2.5.0.v*`
 * link:https://bintray.com/jmini/maven/mylyn-wikitext/Mars.1/view[Mars.1] (02/10/2015), Version `2.6.0.v*`
 * link:https://bintray.com/jmini/maven/mylyn-wikitext/Mars.2/view[Mars.2] (26/02/2016), Version `2.7.0.v*`
+* link:https://bintray.com/jmini/maven/mylyn-wikitext/Neon.0/view[Neon.0] (22/06/2016), Version `2.9.0.v*`
 
 
 === Remarks
@@ -98,7 +113,7 @@ Because the Idea of this repository is to consume mylyn-wikitext in a plain mave
 In my opinion the `ui` jars are consumed in an Eclipse RCP context where building with Tycho and consuming the P2 repository is not a problem.
 
 The Eclipse simultaneous release train (starting with `Mars.0`) was used as base to build the maven repository.
-This is why jars like `org.eclipse.mylyn.wikitext.commonmark` or `org.eclipse.mylyn.wikitext.asciidoc.core` are not available.
+This is why a jar like `org.eclipse.mylyn.wikitext.commonmark` is not available in the repository.
 
 === Examples
 
@@ -116,7 +131,7 @@ The Mylyn Wikitext project provides an official maven repository hosted by the E
   https://repo.eclipse.org/content/repositories/mylyn-snapshots/
 
 Please note that this repository contains only snapshot artifacts.
-A major difference is also that link:http://jmini.github.io/blog/2016/2016-02-21_maven_repo_and_pom_files.html[the dependencies declaration is not the same between the Eclipse Fundation repository and my repository].
+A major difference is also that link:{blog-post}[the dependencies declaration is not the same between the Eclipse Fundation repository and my repository].
 I consider my repository as much more user friendly.
 
 == Issue tracker / Get in touch
