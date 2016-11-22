@@ -27,15 +27,11 @@
   <setupTask
       xsi:type="setup.p2:P2Task">
     <requirement
-        name="org.eclipse.b3.aggregator.editor.feature.feature.group"/>
+        name="org.eclipse.cbi.p2repo.aggregator.editor.feature.feature.group"/>
     <requirement
-        name="org.eclipse.b3.aggregator.engine.feature.feature.group"/>
-    <requirement
-        name="org.eclipse.b3.p2.maven.indexer.feature.feature.group"/>
-    <requirement
-        name="org.eclipse.b3.license.feature.feature.group"/>
+        name="org.eclipse.cbi.p2repo.aggregator.engine.feature.feature.group"/>
     <repository
-        url="http://download.eclipse.org/modeling/emft/b3/updates-4.4"/>
+        url="http://download.eclipse.org/cbi/updates/aggregator/ide/4.6/"/>
     <description>Install the tools needed in the IDE to work with the source code for ${scope.project.label}</description>
   </setupTask>
   <setupTask

@@ -1,10 +1,12 @@
 :wikitext: https://wiki.eclipse.org/Mylyn/WikiText
 :bug421551: https://bugs.eclipse.org/bugs/show_bug.cgi?id=421551
+:bug506726: https://bugs.eclipse.org/bugs/show_bug.cgi?id=506726
 :mylyn_ml: http://dev.eclipse.org/mhonarc/lists/mylyn-docs-dev/
 :mylyn_forum: http://www.eclipse.org/forums/index.php/f/83/
 :mylyn_so: http://stackoverflow.com/tags/mylyn-wikitext
 :bintray_package: https://bintray.com/jmini/maven/mylyn-wikitext/view
 :eclipse_b3: https://www.eclipse.org/b3
+:eclipse_cbi_aggr: https://wiki.eclipse.org/CBI/aggregator
 :githubrepo: jmini/mylyn-wikitext-repository
 :issues: https://github.com/{githubrepo}/issues
 :license: http://www.eclipse.org/legal/epl-v10.html
@@ -150,8 +152,13 @@ For the `mylyn-wikitext` project itself:
 
 === Description
 
-I have used the link:{eclipse_b3}[Eclipse b3] tool to convert the p2 repository into a maven repository.
-The `*.b3aggr` files are located in the `aggregator` project.
+This work rely on the link:{eclipse_cbi_aggr}[Eclipse CBI aggregator] tool.
+It does the convertion of the p2 repository into a maven repository.
+The `*.aggr` files are located in the `aggregator` project.
+
+Before end 2016, the aggregator tool was named link:{eclipse_b3}[Eclipse b3 aggregator].
+The files using this version of the tool are using the extension `*.b3aggr`.
+Learn more about the transition in link:{bug506726}[Bug 506726]
 
 Some help scripts written in Java are located in the `javatools` project.
 
@@ -160,7 +167,7 @@ Some help scripts written in Java are located in the `javatools` project.
 There is no automatic build at the moment.
 This section describes the manual steps requested to build the maven repository and to upload it to bintray.
 
-. Open an `*.b3aggr` file with the "Aggregator Model Editor".
+. Open an `*.aggr` file with the "Aggregator Model Editor".
 . Select the root node and run "Build Aggregation".
 . In the created repository, the p2 files are not necessary:
   * {repository}/final/artifacts.jar
