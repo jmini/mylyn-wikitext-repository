@@ -9,7 +9,7 @@
         Ant tasks for the mylyn-wikitext-repository project
     </description>
 
-    <property name="maven.repo.folder" value="neon_repository"/>
+    <property name="maven.repo.folder" value="neon1_repository"/>
     <property name="dest.file" value="target/neon_maven_repository.zip"/>
 
     <!-- ================================= 

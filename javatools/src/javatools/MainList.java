@@ -29,7 +29,7 @@ import org.w3c.dom.Document;
  * Main Java Class to compute the "dependencies" section of the pom.xml file.
  */
 public class MainList {
-  private static String REPOSITORY_NAME = "neon_repository";
+  private static String REPOSITORY_NAME = "neon1_repository";
   private static File REPOSITORY_FOLDER = new File("../aggregator/" + REPOSITORY_NAME + "/final");
 
   public static void main(String[] args) throws Exception {
@@ -63,22 +63,34 @@ public class MainList {
 
     StringBuilder sb = new StringBuilder();
     for (MavenCoordinate c : coodinates) {
-      sb.append("    <dependency>\n");
-      sb.append("      ");
-      sb.append("<groupId>");
-      sb.append(c.getGroupId());
-      sb.append("</groupId>\n");
-      sb.append("      ");
-      sb.append("<artifactId>");
-      sb.append(c.getArtifactId());
-      sb.append("</artifactId>\n");
-      sb.append("      ");
-      sb.append("<version>");
-      sb.append(c.getVersion());
-      sb.append("</version>\n");
-      sb.append("    </dependency>\n");
+      appendAsList(sb, c);
+//      appendAsXml(sb, c);
     }
     System.out.println(sb.toString());
+  }
+
+  private static void appendAsList(StringBuilder sb, MavenCoordinate c) {
+    sb.append("* ");
+    sb.append(c.getArtifactId());
+    sb.append(": ");
+    sb.append(c.getVersion());
+    sb.append("\n");
+  }
+
+  private static void appendAsXml(StringBuilder sb, MavenCoordinate c) {
+    sb.append("    <dependency>\n");
+    sb.append("      ");
+    sb.append("<groupId>");
+    sb.append(c.getGroupId());
+    sb.append("</groupId>\n");
+    sb.append("      ");
+    sb.append(c.getArtifactId());
+    sb.append("</artifactId>\n");
+    sb.append("      ");
+    sb.append("<version>");
+    sb.append(c.getVersion());
+    sb.append("</version>\n");
+    sb.append("    </dependency>\n");
   }
 
   private static List<File> searchPomFiles(File input) {
