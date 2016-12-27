@@ -29,7 +29,7 @@ import org.w3c.dom.Document;
  * Main Java Class to compute the "dependencies" section of the pom.xml file.
  */
 public class MainList {
-  private static String REPOSITORY_NAME = "neon1_repository";
+  private static String REPOSITORY_NAME = "neon2_repository";
   private static File REPOSITORY_FOLDER = new File("../aggregator/" + REPOSITORY_NAME + "/final");
 
   public static void main(String[] args) throws Exception {
@@ -84,6 +84,7 @@ public class MainList {
     sb.append(c.getGroupId());
     sb.append("</groupId>\n");
     sb.append("      ");
+    sb.append("<artifactId>");
     sb.append(c.getArtifactId());
     sb.append("</artifactId>\n");
     sb.append("      ");

@@ -36,59 +36,58 @@ To use the Mylyn Wikitext jars in your pom, pick the interesting parts in from t
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.asciidoc.core</artifactId>
-      <version>2.9.0.v20160524-1633</version>
+      <version>2.10.1.v20161129-1925</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.confluence.core</artifactId>
-      <version>2.9.0.v20160513-1433</version>
+      <version>2.10.1.v20161129-1925</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.core</artifactId>
-      <version>2.9.0.v20160513-1433</version>
+      <version>2.10.1.v20161129-1925</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.core.ant</artifactId>
-      <version>2.9.0.v20160513-1433</version>
+      <version>2.10.1.v20161129-1925</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.html.core</artifactId>
-      <version>2.9.0.v20160513-1433</version>
+      <version>2.10.1.v20161129-1925</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.markdown.core</artifactId>
-      <version>2.9.0.v20160513-1433</version>
+      <version>2.10.1.v20161129-1925</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.mediawiki.core</artifactId>
-      <version>2.9.0.v20160513-1433</version>
+      <version>2.10.1.v20161129-1925</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.mediawiki.core.ant</artifactId>
-      <version>2.9.0.v20160513-1433</version>
+      <version>2.10.1.v20161129-1925</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.textile.core</artifactId>
-      <version>2.9.0.v20160513-1433</version>
+      <version>2.10.1.v20161129-1925</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.tracwiki.core</artifactId>
-      <version>2.9.0.v20160513-1433</version>
+      <version>2.10.1.v20161129-1925</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.mylyn.docs</groupId>
       <artifactId>org.eclipse.mylyn.wikitext.twiki.core</artifactId>
-      <version>2.9.0.v20160519-0832</version>
+      <version>2.10.1.v20161129-1925</version>
     </dependency>
-
   </dependencies>
   
   <repositories>
