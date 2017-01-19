@@ -108,6 +108,7 @@ A simple example (pom file and simple java class) is presented in this link:{blo
 * link:https://bintray.com/jmini/maven/mylyn-wikitext/Mars.2/view[Mars.2] (26/02/2016), Version `2.7.0.v*`
 * link:https://bintray.com/jmini/maven/mylyn-wikitext/Neon.0/view[Neon.0] (22/06/2016), Version `2.9.0.v*`
 * With Neon.1 the same version as with Neon.0 was released.
+* link:https://bintray.com/jmini/maven/mylyn-wikitext/Neon.2/view[Neon.2] (21/12/2016), Version `2.10.0.v*`
 
 === Remarks
 Because the Idea of this repository is to consume mylyn-wikitext in a plain maven project (or maven plugin), only the `core` jars are published.
